@@ -1,0 +1,436 @@
+/*  initial set up  */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+
+
+:root{
+    --green : #27ae60; 
+    --dark-bg : #219150; 
+    --black : #444; 
+
+    --light-color : #666; 
+    --border : .1rem solid rgba(0,0,0,.1); 
+    --border-hover : .1rem solid var(--black); 
+    --box-shadow : 0 .5rem 1rem rgba(0,0,0,.1); 
+
+
+
+}
+
+
+
+*{
+    font-family: 'Poppins',sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+
+
+html {
+   font-size: 62.5%; 
+   overflow-x: hidden;
+   scroll-padding-top: 5rem ;
+   scroll-behavior: smooth;
+
+}
+
+
+
+
+html::-webkit-scrollbar-thumb{
+    background: var(--block);
+
+}
+
+
+/* ================= header section ================  */
+
+.header .header-1{
+    background-color: #fff;
+    padding: 1.5rem 7%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.header .header-1 .logo{
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color: var(--black);
+}
+
+.header .header-1 .logo i{
+    color: var(--green);
+
+}
+
+.header .header-1 .search-form{
+    width: 50rem;
+
+    height: 5rem;
+    border: var(--border);
+    overflow: hidden;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    border-radius: .5rem;
+
+}
+
+
+.header .header-1 .search-form input{
+font-size: 1.6rem;
+padding : 0 1.2rem ; 
+height: 100%;
+width: 100%;
+text-transform:  none;
+color: var(--black);
+
+}
+
+
+.header .header-1 .search-form label{
+   font-size: 2.5rem; 
+   padding-right: 1.5rem;
+   color: var(--black);
+   cursor: pointer;
+}
+
+.header .header-1 .search-form label:hover{
+    color: var(--green);
+}
+
+
+.header .header-1 .icons div,
+.header .header-1 .icons a{
+    font-size: 2.5rem;
+    margin-left: 1.5rem;
+    color: var(--black);
+    cursor: pointer;
+
+}
+
+
+.header .header-1 .icons div:hover,
+.header .header-1 .icons a:hover{
+    color : var(--green); 
+
+}
+
+
+#search-btn{
+    display: none;
+
+}
+
+
+
+.header .header-2{
+   background-color: var(--green); 
+
+}
+
+.header .header-2 .navbar{
+    text-align: center;
+}
+
+.header .header-2 .navbar a{
+    color : #fff; 
+    display: inline-block;
+    padding: 1.2rem;
+    font-size: 1.7rem;
+
+}
+
+
+.header .header-2 .navbar a:hover{
+    background-color: var(--dark-bg);
+}
+
+
+.header .header-2.active{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 5;
+
+}
+
+
+
+.bottom-navbar{
+    text-align:  center;
+    background-color: var(--green);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 5;
+    display: none;
+
+}
+
+.bottom-navbar a{
+    font-size: 2.5rem;
+    padding: 2rem;
+    color: #fff;
+    
+
+}
+
+.bottom-navbar a:hover{
+    background-color: var(--dark-bg);
+}
+
+
+@media (max-width:991px){
+ html{
+    font-size: 55%;
+ }
+
+ .header .header-1{
+    padding : 2rem ; 
+
+ }
+}
+
+@media (max-width:768px){
+    .header .header-2{
+        display: none;
+
+    }
+
+    html{
+       scroll-padding-top: 0; 
+    }
+    body{
+        padding-bottom: 8rem;
+
+    }
+
+        .header .header-1{
+            box-shadow: var(--box-shadow);
+               
+            position: relative;
+        }
+
+      .header .header-1 .search-form.active {
+        top : 115%;
+        z-index : 0 ; 
+    }
+
+    .header .header-1 .search-form {
+        position: absolute;
+        top : -115%; 
+        right : 2rem ; 
+        width : 90% ; 
+        box-shadow: var(--box-shadow);
+
+    }
+  
+
+    #search-btn{
+        display : inline-block ; 
+    }
+
+    .bottom-navbar{
+        display: block;
+    }
+}
+
+@media (max-width:450px){
+     html{
+    font-size: 50%;
+ }
+}
+
+
+
+/*  logging form  */
+
+
+.login-form-container{
+    display: flex;
+    align-items : center ; 
+    justify-content : center; 
+    background-color: rgba(255,255,255,9);
+    z-index : 2; 
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    right: -105%;
+    z-index: 10000;
+    height: 100%;
+    width: 100%;
+
+
+   
+
+
+}
+.login-form-container.active{
+    right : 0 ;
+}
+.login-form-container form {
+    background-color: #fff;
+    border : var(--border); 
+    width : 40rem ; 
+    border-radius: .5rem;
+    padding: 2rem;
+    box-shadow: var(--box-shadow);
+    margin: 2rem;
+}
+
+.login-form-container form h3{
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: var(--black);
+    text-align: center;
+
+}
+
+
+.login-form-container form span{
+    display: block;
+    font-size: 1.5rem;
+    padding-top: 1.5rem;
+    margin-bottom: .5rem;
+}
+
+/* .login-form-container form .box{
+    width: 100%;
+    font-size: 1.5rem;
+    color : #555; 
+    border-radius: .5rem;
+    border: var(--border);
+    padding: 1rem 1rem ;
+}
+
+.login-form-container form  .checkbox {
+    display: flex ;
+    align-items: center;
+    gap : 1rem ; 
+    margin-top: 2rem;
+    font-size: 1.5rem;
+}
+
+.login-form-container form .btn{
+    margin-top: 1rem;
+    background-color: var(--black);
+    color: #efefef;
+    padding: 1rem;
+    width: 50%;
+    border-radius: 5rem;
+    margin : 1rem auto ; 
+    display: block;
+    cursor: pointer;
+    
+}
+
+
+.login-form-container form .btn:hover{
+    background-color: var(--dark-bg);
+}
+
+.login-form-container form p{
+    font-size: 1.5rem;
+    padding : .5rem 0 
+}
+
+.login-form-container form p a{
+    margin-left: 2rem;
+    color: #219150;
+}
+
+.login-form-container form p a:hover{
+    text-decoration: underline;
+}
+
+
+
+ */
+
+ .login-form-container form .box{
+    margin : .7rem 0 ; 
+    font-size: 1.6rem;
+    border: var(--border);
+    border-radius: .5rem;
+    padding: 1rem 1.2rem;
+    color: var(--black);
+    text-transform: none;
+    width: 100%;
+
+ }
+
+  .login-form-container form .checkbox{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    padding: 1rem 0 ;
+
+  }
+
+  .login-form-container form .checkbox label{
+    font-size: 1.5rem;
+    color: var(--light-color);
+  }
+
+  .btn{
+    margin-top: 1rem;
+    display: inline-block;
+    padding:.9rem 3rem; 
+    border-radius: .5rem;
+    background-color: var(--green);
+    font-size: 1.7rem;
+    cursor: pointer;
+    color: #fff;
+    font-size: 500;
+
+
+  }
+   .login-form-container form .btn{
+    text-align: center;
+    width: 100%;
+   }
+
+  .login-form-container form .btn:hover{
+    background-color: #252525;
+    color : #fff;
+  }
+
+  .login-form-container form p{
+    padding-top: .8rem;
+    color: var(--light-color);
+    font-size: 1.5rem;
+  }
+
+
+    .login-form-container form p a{
+      color: var(--green);  
+      text-decoration: underline;
+    }
+
+.login-form-container #close-login-btn{
+    position: absolute;
+    top: 1.5rem;
+    right: 2.5rem;
+    font-size: 5rem;
+    color: var(--black);
+    cursor: pointer;
+}
+
+
+
