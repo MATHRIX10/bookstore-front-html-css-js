@@ -511,3 +511,268 @@ color: var(--black);
     line-height: 2rem;
     padding: 1rem 0;
 }
+
+
+
+.icons-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(25rem,1fr)) ;
+    gap : 1.5rem ; 
+    place-items: center;
+
+
+
+}   
+
+.icons-container .icons {
+    display: flex ;
+    align-items: center;
+    gap: 1.5rem;
+    padding : 2rem 0 ; 
+
+
+}
+
+.icons-container .icons i{
+    font-size: 3.5rem;
+    color : var(--green); 
+
+}
+
+.icons-container .icons h3{
+    font-size: 2.2rem;
+    color: var(--black);
+    padding-bottom: .5rem;
+
+}
+
+.icons-container .icons p{
+    font-size: 1.4rem;
+    color: var(--black);
+}
+
+
+
+
+/* featured section  */
+
+
+.heading {
+    text-align: center;
+    margin-bottom: 2rem; 
+    position: relative;
+
+}
+
+
+.heading::before {
+    content: '';
+    position: absolute;
+    top: 50%;left : 0 ; 
+    transform: translateY(-50%);
+    width: 100%;
+    height: .01rem ; 
+    background: rgba(0,0,0,.1);
+    z-index: -1;
+    height: .1rem;
+
+
+    
+}
+
+.heading span{
+    font-size: 3rem;
+    padding: .5rem 2rem;
+    color: var(--black);
+    background: #fff;
+    border: var(--border);
+
+}
+
+
+.featured .featured-slider .box{
+    width : 25rem ; 
+    margin : 2rem 0 ; 
+    position: relative;
+    overflow: hidden;
+    border: var(--border);
+
+    text-align: center;
+
+
+}
+
+
+.featured .featured-slider .box:hover{
+    border: var(--border-hover);
+}
+
+.featured .featured-slider .box .image{
+    padding: 1rem;
+    background: linear-gradient(15deg , #eee 30% , #fff 30.1%);
+}
+
+.featured .featured-slider .box .image img{
+    width: 100%;
+}
+
+.featured .featured-slider .box img{
+
+}
+
+.featured .featured-slider .box .icons{
+
+  position: absolute;
+  top: 0;left: 0;right:0;
+  width: 100%;
+ background: #fff;
+ z-index: 1;
+ transform: translateY(-100%);
+
+}
+.featured .featured-slider .box:hover .icons{
+    transform: translateY(0%);
+}
+
+.featured .featured-slider .box .icons a{
+    color: var(--black);
+    font-size: 2.2rem;
+    padding: 1.3rem 1.5rem;
+   
+   
+}
+
+
+.featured .featured-slider .box .icons a:hover{
+    background-color: var(--green);
+     color: #fff;
+}
+
+.featured .featured-slider .box .content{
+    background-color: #eee;
+    padding: 1.5rem;
+
+}
+
+.featured .featured-slider .box .content h3{
+    font-size: 2rem;
+    color: var(--black);
+
+}
+
+
+.featured .featured-slider .box .content .price{
+    font-size: 2.2rem;
+    color: var(--black);
+    padding-top: 1rem;
+
+}
+
+.featured .featured-slider .box .content .price span{
+    font-size: 1.5rem;
+    color: var(--light-color);
+    padding-top: 1rem;
+    text-decoration: line-through;
+}
+
+
+.newsletter{
+    background: url(./image/letter-bg.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+
+.newsletter form {
+    max-width: 45rem;
+    margin-left: auto ;
+    text-align: center;
+    padding: 5rem 0;
+
+
+}
+
+.newsletter form h3{
+    font-size: 2.5rem;
+    color: #fff;
+    padding-bottom: .7rem;
+    font-weight: normal;
+
+
+}
+
+.newsletter form .box{
+    width: 100%;
+    margin: .7rem 0 ;
+    padding: 1rem 1.2rem;
+    font-size: 1.6rem;
+    color: var(--black);
+    border-radius: .5rem;
+    text-transform: none;
+
+
+}
+
+
+@media (max-width:768px){
+    .newsletter{
+        background-position: right;
+    }
+    .newsletter form{
+        margin-left: 0 ;
+        max-width: 100%;
+    }
+}
+
+
+
+/* arrivals  */
+.arrivals .arrivals-slider .box{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 2rem 1rem ;
+    border: var(--border);
+    margin: 1rem 0;
+
+}
+.arrivals .arrivals-slider .box:hover{
+    border: var(--border-hover);
+}
+
+.arrivals .arrivals-slider .box .image img{
+height: 15rem;
+}
+
+
+.arrivals .arrivals-slider .box .content h3{
+    font-size: 2rem;
+    color: var(--black);
+    padding-bottom: .5rem;
+
+}
+
+.arrivals .arrivals-slider .box .content .price{
+    font-size: 2.2rem;
+    color: var(--black);
+    padding-bottom: .5rem;
+}
+.arrivals .arrivals-slider .box .content .price span{
+    text-decoration: line-through; 
+    font-size: 1.5rem;
+    color: var(--light-color);
+}
+
+.arrivals .arrivals-slider .box .content .stars i{
+    font-size: 1.5rem;
+    color: var(--green);
+    
+
+}
+
+
+
+
+
+
